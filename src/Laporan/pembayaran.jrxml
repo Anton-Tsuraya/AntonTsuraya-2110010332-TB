@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5d49f2a-0b0e-40a8-a2ee-eb7f396ac0dc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT pembayaran.*, pendaftaran.nama_siswa FROM pembayaran INNER JOIN pendaftaran ON pembayaran.no_daftar = pendaftaran.no_daftar INNER JOIN orangtua ON pembayaran.id_ortu = orangtua.id_ortu]]>
+	</queryString>
+	<field name="no_pembayaran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_daftar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_ortu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_siswa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="0" width="333" height="37" uuid="5589aac0-43b6-4ad1-94d6-30f0dd39fbb5"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Laporan Pembayaran ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="37" width="333" height="20" uuid="d62ef290-6fcd-4936-a125-23440c54fbd0"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tahun Ajaran 2024]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20" uuid="593e7192-e051-4ed3-a3e8-65c732182762"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="112" height="20" uuid="944e5ca6-a148-42a6-855b-925d6ddd7ec4"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No Daftar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="0" width="109" height="20" uuid="913964ef-32ac-45e1-89be-67c955e69f82"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Id Orang Tua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="332" y="0" width="112" height="20" uuid="ba0303df-39d0-4f59-954b-b3684163c23e"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Bayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="20" uuid="44bde53b-b644-4eb3-b2c4-6f5a9baae135"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Nama Siswa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="20" uuid="fef0e7bd-50a5-4298-85e5-69951b0ef8ae"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_pembayaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="112" height="20" uuid="f093feb5-d4b9-4e7f-9dbf-f35eb2d20d32"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_daftar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="109" height="20" uuid="83b240bf-0e80-4fc1-b274-1cc35a758782"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_ortu}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0">
+				<reportElement x="332" y="0" width="112" height="20" uuid="424cd5c0-f9af-4886-bd04-31fd74a1b9cf"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="f2a54a91-6060-46b7-bc24-9e1dafe53fef"/>
+				<box topPadding="4" leftPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_siswa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement x="426" y="33" width="128" height="20" uuid="f063ea9e-8a37-406c-8df4-de049ff092a4"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="93" width="128" height="20" uuid="ab1445a3-9742-4fae-8ddb-966cb41999f3"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Nama Lengkap dan Gelar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="113" width="128" height="20" uuid="06f80d6c-2c23-4fa7-b1c5-a9ce9d6f58d7"/>
+				<text><![CDATA[NIP.____________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="13" width="128" height="20" uuid="b3ad51cb-0698-4a70-a71c-bbe98eea8fd3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[-----------------------------------------]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
